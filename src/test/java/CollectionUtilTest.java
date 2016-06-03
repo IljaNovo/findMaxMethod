@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -36,12 +37,7 @@ public class CollectionUtilTest {
 
     @Test
     public void testExecutionFindMax() throws Exception {
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        list.add(3);
-        list.add(5);
-        list.add(2);
-        list.add(-1);
+        List<Integer> list = Arrays.asList(1, 3, 5, 2, -1);
         Assert.assertEquals(CollectionUtil.findMax(list, new Comp()), new Integer(5));
     }
 }
